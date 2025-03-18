@@ -1,0 +1,48 @@
+Week 7: Visual Representation
+
+1. Create a visual connection between the different structures, classes, views, logic we created for the app. 
+
+TicTacToe App
+├── AppEntry.swift         // Entry point
+│  
+├── StartView.swift        // Initial user selection screen
+│
+├── Models
+│   ├── GameModels.swift   // Defines Players, Moves, Board State
+│
+├── Game Logic
+│   ├── GameService.swift  // Handles game rules, checking winner
+│
+├── UI Components
+│   ├── GameView.swift     // Displays the TicTacToe board
+│   ├── GameSquare.swift   // Represents a single square in the game
+│   ├── SquareView.swift   // Handles square interactions
+│
+├── Assets
+    ├── Images (X, O, Board Icons)
+    ├── Launch Screen.storyboard
+
+2. You should also list the flow of the code based on different user's journey on the app (e.g., plays a single player game till completion and restarts a new game, plays a single player game and quits after the seeing the result, etc.)
+
+Single-Player Game (Plays Until Completion & Restarts)
+	User launches the app.
+	Selects Single Player Mode.
+	The game starts against an AI opponent.
+	User makes moves until a winner is determined.
+	Game displays the result (Win/Loss/Draw).
+	User chooses to restart → Redirected back to StartView.
+
+Single-Player Game (Quits After Seeing Result)
+	User launches the app.
+	Selects Single Player Mode.
+	Plays the game until completion.
+	Sees the result and chooses to exit → App closes or returns to home screen.
+
+Multiplayer Game
+	User launches the app.
+	Selects Multiplayer Mode.
+	Players take turns making moves.
+	Once a winner is decided, the game displays the result.
+	Players can either:
+		Restart the game.
+		Exit the app.
